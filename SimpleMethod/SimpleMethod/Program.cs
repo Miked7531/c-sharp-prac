@@ -19,48 +19,11 @@ namespace SimpleMethod
             string lastName = Console.ReadLine();
 
             Console.Write("In what city were you born? ");
-            string city = Console.ReadLine();
-
-            /*
-            char[] firstNameArray = firstName.ToCharArray();
-            Array.Reverse(firstNameArray);
-
-            char[] lastNameArray = lastName.ToCharArray();
-            Array.Reverse(lastNameArray);
-
-            char[] cityArray = city.ToCharArray();
-            Array.Reverse(cityArray);
-
-            string result = "";
-
-            foreach (char item in firstNameArray)
-            {
-                result += item;
-            }
-
-            result += " ";
-
-            foreach (char item in lastNameArray)
-            {
-                result += item;
-            }
-
-            foreach (char item in cityArray)
-            {
-                result += item;
-            }
-
-            Console.WriteLine("Results: " + result);
-            */
-
-            Console.Write("Results: ");
-            string reversedFirstName = ReverseString(firstName);
-            string reversedLastName = ReverseString(lastName);
-            string reversedCity = ReverseString(city);
-
+            string city = Console.ReadLine();           
+            
             DisplayResult(ReverseString(firstName), 
                 ReverseString(lastName), 
-                ReverseString(city));
+                ReverseString(city));          
 
             Console.ReadLine();
         }
@@ -77,9 +40,15 @@ namespace SimpleMethod
             string reversedCity)
         {
             Console.Write("Results: ");
-            string reversedFirstName = ReverseString(firstName);
-            string reversedLastName = ReverseString(lastName);
-            string reversedCity = ReverseString(city);
+            Console.Write(String.Format("{0} {1} {2}", reversedFirstName,
+            reversedLastName,
+            reversedCity));
+        }
+
+        private static void DisplayResult(string message)
+        {
+            Console.Write("Results: ");
+            Console.Write(message);
         }
         
     }
