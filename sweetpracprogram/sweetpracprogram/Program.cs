@@ -9,6 +9,10 @@ namespace sweetpracprogram
             for(int i = 9; i >= 0; i-=2)
             {
                 Console.WriteLine(i);
+                if(i == 7)
+                {
+                    Console.WriteLine("We found 7!");
+                }
             }
             /*
             int i = 0;
