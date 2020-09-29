@@ -9,7 +9,7 @@ namespace sweetpracprogram
             for(int i = 9; i >= 0; i-=2)
             {
                 Console.WriteLine(i);
-                if(i == 7)
+                if(i == 7) // nested if
                 {
                     Console.WriteLine("We found 7!");
                 }
