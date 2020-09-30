@@ -6,29 +6,23 @@ namespace nested_prac
     {
         static void Main(string[] args)
         {
-            int i = 9;
-            while (i >= 0)
+            for (int i = 9; i >= 0; i--)
             {
-                int k = i;
-                while (k >= 0)
+                if(i == 5)
                 {
-                    Console.Write(k + " ");
-                    k--;
+                    break;
                 }
-                Console.WriteLine();
-                i--;
-            }
-            /*
-            for(int i = 9; i >= 0; i--)
-            {
                 for (int k = i; k >= 0; k--)
                 {
-                    Console.Write(k + " ");
+                    if(k == 3)
+                    {
+                        break;
+                    }
+                    
+                    Console.WriteLine(k + " ");
                 }
                 Console.WriteLine();
-                
             }
-            */
         }
     }
 }
