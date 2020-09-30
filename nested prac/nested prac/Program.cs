@@ -6,18 +6,13 @@ namespace nested_prac
     {
         static void Main(string[] args)
         {
-            bool logging = false; // using true will out the inner if statement.
-            for(int i = 9; i >= 0; i -= 2)
+            for(int i = 9; i >= 0; i--)
             {
-                Console.WriteLine(i);
-                if(i == 7)
+                for (int k = i; k >= 0; k--)
                 {
-                     if (logging == true)
-                     {
-                         Console.WriteLine("We found 7!");
-                     }
-                    
+                    Console.Write(k + " ");
                 }
+                Console.WriteLine();
             }
         }
     }
