@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,42 +11,37 @@ namespace Pracdump
     {
         static void Main(string[] args)
         {
-            string[] trucks = { "Chevy", "Toyota", "Ford", "Nissan" };
-            Console.Write("Enter a number: ");
-            var userRespone = Convert.ToInt32(Console.ReadLine());
-            if (userRespone > 3 || userRespone < 0)
+            try
             {
-                Console.Write("Invalid input");
+                Console.WriteLine("Pick a number.");
+                int numberOne = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Pick a second number.");
+                int numberTwo = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Dividing the two...");
+                int numberThree = numberOne / numberTwo;
+                Console.WriteLine(numberOne + " divided by " + numberTwo + " equals " + numberThree);
+                Console.ReadLine();
             }
-            else
+
+            catch (FormatException)
             {
-                Console.WriteLine(trucks[userRespone]);
+                Console.WriteLine("Please type a whole number");
+                return;
+            }
+            catch(DivideByZeroException)
+            {
+                Console.WriteLine("Please don't divide by zero");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Console.ReadLine();
             }
             
-            Console.ReadLine();
 
-            int[] numbers = { 23, 60, 1, 45 };
-            Console.Write("Enter a number: ");
-            var userResponse = Convert.ToInt32(Console.ReadLine());
-            if (userResponse > 3 || userResponse < 0)
-            {
-                Console.Write("invalid input");
-            }
-            else
-            {
-                Console.WriteLine(numbers[userResponse]);
-                
-            }
-            Console.ReadLine();
-
-            List<string> var1 = new List<string>();
-            var1.Add("We went to the beach");
-            var1.Add("Then went to the bar");
-            var1.Add("Didn't go to the car");
-            Console.WriteLine("Input a number: ");
-            int userInput = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(var1[userInput]);
-            Console.ReadLine();
         }
     }
 }
