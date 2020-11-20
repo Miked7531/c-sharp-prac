@@ -21,11 +21,11 @@
             <asp:TextBox ID="lengthTextBox" runat="server"></asp:TextBox>
             <br />
             <br />
-            <asp:RadioButton ID="groundRadio" runat="server" Text="Ground" />
+            <asp:RadioButton ID="groundRadio" runat="server" Text="Ground" GroupName="deliveryGroup" />
             <br />
-            <asp:RadioButton ID="RadioButton2" runat="server" Text="Air" />
+            <asp:RadioButton ID="RadioButton2" runat="server" Text="Air" GroupName="deliveryGroup" />
             <br />
-            <asp:RadioButton ID="RadioButton3" runat="server" />
+            <asp:RadioButton ID="nextRadio" runat="server" GroupName="deliveryGroup" Text="Next Day" />
             <br />
             <br />
             <br />

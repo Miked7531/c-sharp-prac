@@ -69,13 +69,13 @@ namespace PostageCalcChallenge
         protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
 
         /// <summary>
-        /// RadioButton3 control.
+        /// nextRadio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton3;
+        protected global::System.Web.UI.WebControls.RadioButton nextRadio;
 
         /// <summary>
         /// resultLabel control.
